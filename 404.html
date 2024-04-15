@@ -47,6 +47,25 @@
             font-size: 5rem;
             color: #ff0000; /* Red color */
             animation: spin 2s linear infinite;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            background-color: #ff0000; /* Red color */
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #cc0000; /* Darker red on hover */
         }
 
         @keyframes spin {
@@ -67,23 +86,6 @@
                 opacity: 1;
             }
         }
-
-        .btn {
-            background-color: #ff0000; /* Red color */
-            color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background-color: #cc0000; /* Darker red on hover */
-        }
     </style>
 </head>
 
@@ -93,6 +95,7 @@
         <h1 class="title">Page Not Found</h1>
         <p class="description">Oops! Looks like you're lost.</p>
         <i class="fas fa-question-circle question-mark"></i>
+        <br>
         <a href="./index.html" class="btn">Return to Home</a>
     </div>
 </body>
