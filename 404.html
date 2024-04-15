@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 8rem;
+            color: #ff0000; /* Red color */
+            margin-bottom: 2rem;
+        }
+
+        .title {
+            color: #ff0000; /* Red color */
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        .description {
+            color: #ccc;
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        .question-mark {
+            font-size: 5rem;
+            color: #ff0000; /* Red color */
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .btn {
+            background-color: #ff0000; /* Red color */
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #cc0000; /* Darker red on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">404</div>
+        <h1 class="title">Page Not Found</h1>
+        <p class="description">Oops! Looks like you're lost.</p>
+        <i class="fas fa-question-circle question-mark"></i>
+        <a href="./index.html" class="btn">Return to Home</a>
+    </div>
+</body>
+
+</html>
