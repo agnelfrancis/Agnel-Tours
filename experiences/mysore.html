@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mysore</title>
+    <title>Mysore Trip</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
@@ -18,6 +18,7 @@
         nav {
             background-color: #333;
             padding: 1rem;
+            text-align: center;
         }
 
         nav ul {
@@ -45,31 +46,63 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
             margin-top: 2rem;
+            text-align: center;
         }
 
         .title {
-            color: #ff0000; /* Red color */
-            text-align: center;
+            color: #ffcc00;
             animation: fade-in 2s ease-in-out;
         }
 
         .description {
             color: #ccc;
-            text-align: center;
             margin-bottom: 2rem;
             animation: fade-in 2s ease-in-out;
         }
 
-        .countdown {
-            text-align: center;
-            font-size: 2rem;
+        .activity {
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
             margin-bottom: 2rem;
+            animation: fade-in 2s ease-in-out;
+            text-align: center;
+        }
+
+        .activity-title {
+            font-size: 1.5rem;
+            color: #ffcc00;
+            margin-bottom: 1rem;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        .activity-description {
+            color: #fff;
+            line-height: 1.6;
+            animation: fade-in 2s ease-in-out;
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        #countdown {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: #ffcc00;
+        }
+
+        .day-title {
+            font-size: 1.3rem;
+            color: #ffcc00;
+            margin-bottom: 1rem;
         }
 
         @keyframes fade-in {
             0% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
@@ -85,32 +118,116 @@
     </nav>
 
     <div class="container" id="home">
-        <h1 class="title">Mysore</h1>
-        <p class="description">I'll be visiting Mysore soon! Stay tuned for updates.</p>
-        <div class="countdown" id="countdown"></div>
+        <h1 class="title">Mysore Trip</h1>
+        <p class="description">Explore the vibrant city of Mysore!</p>
+
+        <!-- Day 1 -->
+        <div class="day-section">
+            <h2 class="day-title">Departure</h2>
+            <div class="activity">
+                <h3 class="activity-title">Humsafar Express</h3>
+                <div class="activity-description">
+                    <p>B2 Coach</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-section">
+            <h2 class="day-title">Arrival</h2>
+            <div class="activity">
+                <h3 class="activity-title">Humsafar Express</h3>
+                <div class="activity-description">
+                    <p>B2 Coach</p>
+                </div>
+            </div>
+            <div class="activity">
+                <h3 class="activity-title">Malgudi Express</h3>
+                <div class="activity-description">
+                    <p>Stay at Greenwood Inn and Suites (Dinner at Ajwa Family Restaurant)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-section">
+            <h2 class="day-title">Exploring Mysore</h2>
+            <div class="activity">
+                <h3 class="activity-title">St. Philomena’s Cathedral</h3>
+                <div class="activity-description">
+                    <p>Shuka Vana</p>
+                    <p>Mysore Zoo</p>
+                    <p>Lunch at Hotel Anadha Bhavan</p>
+                    <p>Lokarajan Underwater Zoo</p>
+                    <p>Mysore Palace</p>
+                    <p>Chamundi Hills</p>
+                    <p>Dinner at Forum City Mall</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-section">
+            <h2 class="day-title">Further Exploration</h2>
+            <div class="activity">
+                <h3 class="activity-title">Payana Car Museum</h3>
+                <div class="activity-description">
+                    <p>Tippu Summer Palace</p>
+                    <p>Tipu Sultan Fort</p>
+                    <p>Tipu’s Death Place</p>
+                    <p>Underground Water Jail</p>
+                    <p>Lunch at SRS Canteen</p>
+                    <p>Brindavan Gardens</p>
+                    <p>Dinner at Ajwa Family Restaurant</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-section">
+            <h2 class="day-title">Departure Day</h2>
+            <div class="activity">
+                <h3 class="activity-title">Mysore JN Railway Station</h3>
+                <div class="activity-description">
+                    <p>Kochuveli Express</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-section">
+            <h2 class="day-title">Return Journey</h2>
+            <div class="activity">
+                <h3 class="activity-title">Kochuveli Express</h3>
+            </div>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div id="countdown"></div>
 
         <script>
             // Set the date we're counting down to
-            var countDownDate = new Date("May 19, 2024 00:00:00").getTime();
+            var countDownDate = new Date("May 17, 2024 00:00:00").getTime();
 
             // Update the countdown every 1 second
-            var x = setInterval(function() {
-                
+            var x = setInterval(function () {
+
                 // Get the current date and time
                 var now = new Date().getTime();
-                
+
                 // Calculate the distance between now and the countdown date
                 var distance = countDownDate - now;
-                
+
                 // Calculate days, hours, minutes, and seconds
                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
+
                 // Display the countdown
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-                
+                document.getElementById("countdown").innerHTML = "Review Submission Deadline: " + days + "d " + hours + "h " +
+                    minutes + "m " + seconds + "s ";
+
                 // If the countdown is over, display a message
                 if (distance < 0) {
                     clearInterval(x);
@@ -118,7 +235,6 @@
                 }
             }, 1000);
         </script>
-
     </div>
 </body>
 
